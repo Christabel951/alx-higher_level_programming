@@ -1,7 +1,13 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-last_d = number % 10
+if number < 0:
+    unum = number * -1
+else:
+    unum = number
+last_d = unum % 10
+if number < 0:
+    last_d *= -1
 if last_d > 5:
     str = "and is greater than 5"
 elif last_d == 0:
