@@ -4,4 +4,4 @@ if __name__ == "__main__":
     arrs = dir()
     for i in arrs:
         if i[0:2] != "__":
-            print("{}".format(arr[i]))
+            print("{}".format(i))
