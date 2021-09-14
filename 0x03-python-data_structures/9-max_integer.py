@@ -3,8 +3,8 @@ def max_integer(my_list=[]):
     if len(my_list) == 0:
         return None
     else:
-        i = 0
         bigger = 0
+        i = 0
         while i < len(my_list) - 1:
             if len(my_list) == 1:
                 return my_list[i]
