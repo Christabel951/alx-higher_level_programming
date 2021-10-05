@@ -34,6 +34,7 @@ class Rectangle:
                     rec_str += "#"
                 rec_str += "\n"
             return rec_str[:-1]
+
     def __repr__(self):
         """ Enable recreation of new instance by eval
 
