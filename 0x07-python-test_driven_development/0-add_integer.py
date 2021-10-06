@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """ No imported module """
- 
+
+
 def add_integer(a, b=98):
     """ Adds two integer values
     Args:
