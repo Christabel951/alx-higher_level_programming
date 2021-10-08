@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-""" 
+"""
 Unittest module provide utility to tes for individual units of
 source code
 
 """
 import unittest
 max_integer = __import__('6-max_integer').max_integer
-
-
 
 
 class TestMaxInteger(unittest.TestCase):
