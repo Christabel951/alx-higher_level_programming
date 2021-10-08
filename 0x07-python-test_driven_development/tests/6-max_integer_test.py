@@ -53,6 +53,12 @@ class TestMaxInteger(unittest.TestCase):
         result = max_integer(l)
         self.assertEqual(result, 102)
 
+    def test_identical(self):
+       """Test with a list of identical values: should return the value"""
+       l = [2, 2, 2, 2, 2]
+       result = max_integer(l)
+       self.assertEqual(result, 2)
+
     def test_strings(self):
         """ List of strings: should return the first string """
         l = ["hi", "hello"]
