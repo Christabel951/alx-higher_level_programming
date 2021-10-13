@@ -1,0 +1,46 @@
+================================
+The ``7-base_geometry`` module
+================================
+
+Using ``BaseGeometry``
+-----------------------
+
+Import the class:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now test it:
+
+    >>> bg = BaseGeometry()
+
+    >>> bg.integer_validator("int1", 34)
+
+    >>> bg.integer_validator("int2", 4)
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> bg.integer_validator("name", "Hugo")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
+    >>> bg.integer_validator("temp", -6)
+    Traceback (most recent call last):
+    ValueError: temp must be greater than 0
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> bg.integer_validator("min")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> bg.integer_validator("NaN", float("nan"))
+    Traceback (most recent call last):
+    TypeError: NaN must be an integer
