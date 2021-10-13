@@ -22,4 +22,4 @@ class Square(Rectangle):
 
     def area(self):
         """ Calculate area of Rectangle object """
-        return self.__size * self.__size
+        return self.__size ** 2
