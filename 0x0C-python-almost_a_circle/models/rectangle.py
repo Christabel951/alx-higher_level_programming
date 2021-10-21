@@ -95,7 +95,11 @@ class Rectangle(Base):
 
     def display(self):
         """ Print Rectangle instance using char # """
-        for i in range(0, self.__height):
-            for j in range(0, self.__width):
+        for i in range(0, self.__y):
+            print()
+        for h in range(0, self.__height):
+            for j in range(0, self.__x):
+                print(" ", end="")
+            for w in range(0, self.__width):
                 print("#", end="")
             print()
