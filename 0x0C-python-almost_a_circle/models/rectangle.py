@@ -24,6 +24,11 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        """ Convert Rectangle instance to string """
+        return " ".join("[Rectangle] ({self.id}) {self.x}/{self.y}\
+        - {self.width}/{self.height}".format(self=self).split())
+
     @property
     def width(self):
         """ Retrieve width attribute value """
