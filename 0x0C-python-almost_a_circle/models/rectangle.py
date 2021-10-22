@@ -104,18 +104,32 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Use *args to assigns new values to each attribute """
-        i = 0
-        while args is not None and i < len(args):
-            if i == 0:
-                self.id = args[0]
-            elif i == 1:
-                self.__width = args[1]
-            elif i == 2:
-                self.__height = args[2]
-            elif i == 3:
-                self.__x = args[3]
-            elif i == 4:
-                self.__y = args[4]
-            i += 1
+        if args is not None and len(args) > 0:
+            i = 0
+            while i < len(args):
+                if i == 0:
+                    self.id = args[0]
+                elif i == 1:
+                    self.__width = args[1]
+                elif i == 2:
+                    self.__height = args[2]
+                elif i == 3:
+                    self.__x = args[3]
+                elif i == 4:
+                    self.__y = args[4]
+                i += 1
+        else:
+            if kwargs is not None and len(kwargs) > 0:
+                for key in kwargs.keys():
+                    if key == 'id':
+                        self.id = kwargs[key]
+                    if key == 'width':
+                        self.__width = kwargs[key]
+                    if key == 'height':
+                        self.__height = kwargs[key]
+                    if key == 'x':
+                        self.__x = kwargs[key]
+                    if key == 'y':
+                        self.__y = kwargs[key]
